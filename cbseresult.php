@@ -98,7 +98,7 @@ $error = "Result Not Found";
 $namestring = "size=2> <b>";
 
 
-for ($rollno = 1600000; $rollno < 1600003; ++$rollno) {  // from which roll no to which roll no 
+for ($rollno = 1600001; $rollno < 1600100; ++$rollno) {  // from which roll no to which roll no 
 	
 	$logindata = array(
 			'regno' => $rollno,
@@ -114,12 +114,157 @@ for ($rollno = 1600000; $rollno < 1600003; ++$rollno) {  // from which roll no t
 	curl_setopt($handle, CURLOPT_USERAGENT, $useragent); 
 	//$result contains complete source code of result. Mining isme kerni h !!
 	$result = curl_exec($handle);
-	
-	str_replace("", "", ""); // <- May be using this fucntion . khud soch or kuch possible h?
-	
-	if(!strpos($result, $error)) {
-		$namepos = strpos($result, $namestring);
-	}
+	$index = 2840;
+	for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $name[$i] = $result[$i+$index];
+    }
+    
+    echo implode($name).'<br>';
+    unset($name);
+    $index = $i+$index+145;
+    for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $name[$i] = $result[$i+$index];
+    }
+	echo implode($name).'<br>';
+    unset($name);
+    $index = $i+$index+133;
+    for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $name[$i] = $result[$i+$index];
+    }
+	echo implode($name).'<br>';
+    unset($name);
+    $index = $i+$index+708;
+    for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $subcode[$i] = $result[$i+$index];
+    }
+	echo implode($subcode).'<br>';
+    unset($subcode);
+    $index = $i+$index+62;
+    for($i=0;$result[$i+$index]!="<";$i++);
+    $index = $i+$index+62;
+    for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $marks[$i] = $result[$i+$index];
+    }
+	echo implode($marks).'<br>';
+    unset($marks);
+   $index = $i+$index+166;
+    for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $subcode[$i] = $result[$i+$index];
+    }
+	echo implode($subcode).'<br>';
+    unset($subcode);
+    $index = $i+$index+61;
+    for($i=0;$result[$i+$index]!="<";$i++);
+    $index = $i+$index+61;
+    for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $marks[$i] = $result[$i+$index];
+    }
+	echo implode($marks).'<br>';
+    unset($marks);
+    $index = $i+$index+165;
+    for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $subcode[$i] = $result[$i+$index];
+    }
+	echo implode($subcode).'<br>';
+    unset($subcode);
+    $index = $i+$index+61;
+    for($i=0;$result[$i+$index]!="<";$i++);
+    $index = $i+$index+61;
+    for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $marks[$i] = $result[$i+$index];
+    }
+	echo implode($marks).'<br>';
+    unset($marks);
+    $index = $i+$index+165;
+    for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $subcode[$i] = $result[$i+$index];
+    }
+	echo implode($subcode).'<br>';
+    unset($subcode);
+    $index = $i+$index+61;
+    for($i=0;$result[$i+$index]!="<";$i++);
+    $index = $i+$index+61;
+    for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $marks[$i] = $result[$i+$index];
+    }
+	echo implode($marks).'<br>';
+    unset($marks);
+    $index = $i+$index+165;
+    for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $subcode[$i] = $result[$i+$index];
+    }
+	echo implode($subcode).'<br>';
+    unset($subcode);
+    $index = $i+$index+61;
+    for($i=0;$result[$i+$index]!="<";$i++);
+    $index = $i+$index+61;
+    for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $marks[$i] = $result[$i+$index];
+    }
+	echo implode($marks).'<br>';
+    unset($marks);
+    $index = $i+$index+165;
+    for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $subcode[$i] = $result[$i+$index];
+    }
+	echo implode($subcode).'<br>';
+    unset($subcode);
+    $index = $i+$index+61;
+    for($i=0;$result[$i+$index]!="<";$i++);
+    $index = $i+$index+61;
+    for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $marks[$i] = $result[$i+$index];
+    }
+	echo implode($marks).'<br>';
+    unset($marks);
+    $index = $i+$index+167;
+    for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $subcode[$i] = $result[$i+$index];
+    }
+	echo implode($subcode).'<br>';
+    unset($subcode);
+    $index = $i+$index+61;
+    for($i=0;$result[$i+$index]!="<";$i++);
+    $index = $i+$index+61;
+    for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $marks[$i] = $result[$i+$index];
+    }
+	echo implode($marks).'<br>';
+    unset($marks);
+    $index = $i+$index+168;
+    for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $subcode[$i] = $result[$i+$index];
+    }
+	echo implode($subcode).'<br>';
+    unset($subcode);
+    $index = $i+$index+61;
+    for($i=0;$result[$i+$index]!="<";$i++);
+    $index = $i+$index+61;
+    for($i=0;$result[$i+$index]!="<";$i++)
+    {
+        $marks[$i] = $result[$i+$index];
+    }
+	echo implode($marks).'<br>';
+    unset($marks);
+    
 	curl_close($handle);
 }
 
