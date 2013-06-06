@@ -133,13 +133,13 @@ function outputSubName($index,$result)
 }
 function outputMarks($index,$result)
 {
-    for($i=0;$result[$i+$index]!="<";$i++)
+    for($i=0;$i<3;$i++)
     {
         $marks[$i] = $result[$i+$index];
-    }
+    }    
 	echo implode($marks).'<br>';
     unset($marks); 
-    return $i+$index;
+    return updatePointer($index, $result);
 }
 for ($rollno = 1600001; $rollno < 1600100; ++$rollno) {  // from which roll no to which roll no 
 	
